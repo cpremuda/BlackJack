@@ -34,6 +34,7 @@ public class GameLogic {
 		game.setPlayerName(thisGame.getPlayer().getName());
 		game.setChips(Integer.toString(thisGame.getPlayer().getChips()));
 		game.setBetAmount(Integer.toString(thisGame.getPlayer().getBet()));
+		game.setShuffleAmount(Integer.toString(5));
 		run();
 		
 	}
@@ -86,7 +87,7 @@ public class GameLogic {
 				game.DisableSplit();
 				game.DisableDouble();
 				game.EnableDeal();
-				
+				game.EnablePlayAgain(); //new game button enabled
 				
 				// enable or disable buttons for increasing and decreasing bet.
 				if(thisGame.getPlayer().getChips()-thisGame.getPlayer().getBet()>=betIncrement)
